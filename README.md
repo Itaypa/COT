@@ -1,11 +1,13 @@
 # COT
-Chat Of Things
+# Chat Of Things
 
-How to run Main_Server:
+## How to run Main_Server:
 
-prerequisits:
+## prerequisits:
 Node.js -> https://nodejs.org/en/download/
 
 on terminal/cmd
+
 cd Main_server
+
 node app.js

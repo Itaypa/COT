@@ -10,6 +10,22 @@ var users = require('./routes/users');
 
 var app = express();
 
+// load mongoose package
+var mongoose = require('mongoose');
+
+// Use native Node promises
+mongoose.Promise = global.Promise;
+
+mongoose.connect('mongodb://localhost/schema>')
+    .then(function() {
+        console.log('connection successful')
+    }, function () {
+        console.log('connection rejected')
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

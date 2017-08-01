@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+
+Main_Server/.idea/workspace.xml
+
+Main_Server/package-lock.json

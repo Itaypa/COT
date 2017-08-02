@@ -16,7 +16,7 @@ var mongoose = require('mongoose');
 // Use native Node promises
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/schema>')
+mongoose.connect('mongodb://localhost/TOC')
     .then(function() {
         console.log('connection successful')
     }, function () {

@@ -12,7 +12,7 @@ import android.view.ViewGroup;
  */
 
 @SuppressLint("ValidFragment")
-class SettingsFragment extends Fragment {
+public class SettingsFragment extends Fragment {
 
     public SettingsFragment() {
         // Required empty public constructor

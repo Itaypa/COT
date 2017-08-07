@@ -12,7 +12,7 @@ import android.view.ViewGroup;
  */
 
 @SuppressLint("ValidFragment")
-class IotDevicesFragment extends Fragment {
+public class IotDevicesFragment extends Fragment {
 
     public IotDevicesFragment() {
         // Required empty public constructor

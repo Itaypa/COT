@@ -26,7 +26,6 @@ public class ConversationFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private FloatingActionButton mFloatingActionButton;
     private LinearLayoutManager mLayoutManager;
-    private List<Conversation> myDataset = new ArrayList();
     private MyAdapter mAdapter;
 
     public ConversationFragment() {
@@ -63,14 +62,9 @@ public class ConversationFragment extends Fragment {
         mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addConversation();
+                mAdapter.addConversation();
             }
         });
-    }
-
-    private void addConversation() {
-        myDataset.add(new Conversation("Conversation " + mAdapter.getItemCount()));
-        mAdapter.notifyItemChanged(mAdapter.getItemCount());
     }
 
     private void setAdapterRv() {
@@ -82,7 +76,7 @@ public class ConversationFragment extends Fragment {
         DividerItemDecoration mDividerItemDecoration = new DividerItemDecoration(getContext(), mLayoutManager.getOrientation());
         mRecyclerView.addItemDecoration(mDividerItemDecoration);
 
-        mAdapter = new MyAdapter(myDataset);
+        mAdapter = new MyAdapter(new ArrayList<Conversation>());
         mRecyclerView.setAdapter(mAdapter);
     }
 
@@ -97,7 +91,7 @@ public class ConversationFragment extends Fragment {
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            TextView v = (TextView) LayoutInflater.from(parent.getContext()).inflate(R.layout.conversation_row, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.conversation_row, parent, false);
             ViewHolder vh = new ViewHolder(v);
             return vh;
         }
@@ -116,6 +110,11 @@ public class ConversationFragment extends Fragment {
         @Override
         public int getItemCount() {
             return mDataset.size();
+        }
+
+        public void addConversation() {
+            mDataset.add(0, new Conversation("Conversation " + getItemCount()));
+            notifyItemInserted(0);
         }
     }
 

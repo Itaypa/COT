@@ -1,4 +1,4 @@
-package cot.com.chat_client;
+package cot.com.chat_client.fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import cot.com.chat_client.R;
 
 /**
  * Created by eli on 07/08/17.

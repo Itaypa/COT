@@ -3,4 +3,5 @@
     <string name="text_settings">Settings</string>
     <string name="text_conversations">Conversations</string>
     <string name="text_iot_devices">IOT devices</string>
+    <string name="typeMessage">message...</string>
 </resources>

@@ -1,4 +1,4 @@
-package cot.com.chat_client;
+package cot.com.chat_client.activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,6 +7,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+
+import cot.com.chat_client.R;
+import cot.com.chat_client.adapters.ViewPagerAdapter;
+import cot.com.chat_client.fragments.ConversationFragment;
+import cot.com.chat_client.fragments.IotDevicesFragment;
+import cot.com.chat_client.fragments.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package cot.com.chat_client;
+package cot.com.chat_client.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

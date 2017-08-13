@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var babel = require("babel-core").transform("code", options);
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -12,6 +13,8 @@ var app = express();
 
 // load mongoose package
 var mongoose = require('mongoose');
+
+
 
 // Use native Node promises
 mongoose.Promise = global.Promise;

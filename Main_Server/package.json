@@ -8,12 +8,17 @@
   "dependencies": {
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
-    "debug": "~2.6.3",
+    "debug": "~3.0.0",
     "express": "~4.15.2",
     "jade": "~1.11.0",
     "mongoose": "^4.11.5",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2",
     "stable": "^0.1.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-preset-env": "^1.6.0"
   }
 }
